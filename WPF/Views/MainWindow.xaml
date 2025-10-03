@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel}"
-        Title="MainWindow" Height="250" Width="400" Style="{StaticResource MaterialDesignWindow}">
+        Title="MainWindow" Height="250" Width="600" Style="{StaticResource MaterialDesignWindow}">
     <Grid VerticalAlignment="Center">
 
         <Grid.RowDefinitions>
@@ -22,13 +22,14 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Text="Count Value in UI (Min 5) (Max 10)"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,0,0,0" VerticalAlignment="Center" Text="Count Value in UI (Min 5) (Max 10)"/>
         <materialDesign:NumericUpDown Grid.Row="0" Grid.Column="1" Minimum="5" Maximum="10" Value="{Binding Count, Mode=TwoWay}"/>
 
-        <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,10,5,5" VerticalAlignment="Center" Text="Count Value in ViewModel"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" Margin="5,10,5,5" VerticalAlignment="Center" Text="{Binding Count, Mode=OneWay}"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,30,5,5" VerticalAlignment="Center" Text="Count Value in ViewModel"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Margin="5,30,5,5" VerticalAlignment="Center" Text="{Binding Count, Mode=OneWay}"/>
 
         <Button Grid.Row="2" Grid.Column="0"  Margin="5,50,5,5" Content="Set out of range value from viewModel" Command="{Binding SetInvalidCountCommand}"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Margin="5,50,5,5" VerticalAlignment="Center" Text="Or set out range value manually from UI"/>
 
     </Grid> 
 </Window>
