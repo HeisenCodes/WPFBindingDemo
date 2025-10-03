@@ -9,7 +9,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel}"
         Title="MainWindow" Height="250" Width="600" Style="{StaticResource MaterialDesignWindow}">
-    <Grid VerticalAlignment="Center">
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -29,7 +29,7 @@
         <TextBlock Grid.Row="1" Grid.Column="1" Margin="5,30,5,5" VerticalAlignment="Center" Text="{Binding Count, Mode=OneWay}"/>
 
         <Button Grid.Row="2" Grid.Column="0"  Margin="5,50,5,5" Content="Set out of range value from viewModel" Command="{Binding SetInvalidCountCommand}"/>
-        <TextBlock Grid.Row="2" Grid.Column="1" Margin="5,50,5,5" VerticalAlignment="Center" Text="Or set out range value manually from UI"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Margin="5,50,5,5" VerticalAlignment="Center" Text="Or set out of range value manually from UI"/>
 
     </Grid> 
 </Window>
